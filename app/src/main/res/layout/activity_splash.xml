@@ -4,6 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:fitsSystemWindows="true"
     tools:context="com.catlover.catlover.SplashActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <com.catlover.catlover.widget.FontText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cat"
+                android:textColor="@color/black"
+                android:textSize="60sp"
+                app:typeface="Neon.ttf" />
+
+            <com.catlover.catlover.widget.FontText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lover"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                app:typeface="Neon.ttf" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/load_view"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                app:indicatorName="BallPulseIndicator" />
+
+            <Button
+                android:id="@+id/continue_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_ripple_white"
+                android:paddingLeft="36dp"
+                android:paddingRight="36dp"
+                android:text="Continuar"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cat_start_2" />
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

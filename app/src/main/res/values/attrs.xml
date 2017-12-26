@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="font" format="string" />
+    <attr name="typeface" format="string" />
     <attr name="drawableLeftCompat" format="reference" />
     <attr name="drawableRightCompat" format="reference" />
     <attr name="drawableTopCompat" format="reference" />
     <attr name="drawableBottomCompat" format="reference" />
      <declare-styleable name="FontText">
-    <attr name="font" />
+    <attr name="typeface" />
     <attr name="drawableLeftCompat" />
     <attr name="drawableRightCompat" />
     <attr name="drawableTopCompat" />

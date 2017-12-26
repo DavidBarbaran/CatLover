@@ -20,7 +20,7 @@ public class FontText extends AppCompatTextView{
         super(context, attrs);
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FontText);
-            mFontPath = typedArray.getString(R.styleable.FontText_font);
+            mFontPath = typedArray.getString(R.styleable.FontText_typeface);
             if (mFontPath != null && !mFontPath.isEmpty()) {
                 Typeface typeface = Typeface.createFromAsset(context.getAssets(), mFontPath);
                 setTypeface(typeface);
