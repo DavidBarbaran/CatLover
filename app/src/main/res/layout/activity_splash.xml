@@ -8,18 +8,18 @@
     android:fitsSystemWindows="true"
     tools:context="com.catlover.catlover.SplashActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_gravity="center">
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cat"
                 android:textColor="@color/black"
-                android:textSize="60sp"
+                android:textSize="62sp"
                 app:typeface="Neon.ttf" />
 
             <com.catlover.catlover.widget.FontText
@@ -38,16 +38,21 @@
                 android:layout_height="wrap_content"
                 android:text="Lover"
                 android:textColor="@color/white"
-                android:textSize="60sp"
+                android:textSize="62sp"
                 app:typeface="Neon.ttf" />
 
         </LinearLayout>
 
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="390dp"
+            android:layout_height="300dp"
+            android:background="@drawable/cat_start_2" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingBottom="28dp"
             android:orientation="vertical">
 
             <com.wang.avi.AVLoadingIndicatorView
@@ -67,17 +72,6 @@
                 android:textColor="@color/white"
                 android:visibility="gone" />
 
-
-
         </LinearLayout>
-
-
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cat_start_2" />
-
     </LinearLayout>
-
-
 </android.support.constraint.ConstraintLayout>
