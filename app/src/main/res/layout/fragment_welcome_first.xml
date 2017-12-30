@@ -1,0 +1,61 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context="com.catlover.catlover.fragment.WelcomeFirstFragment"
+    android:id="@+id/frameLayout">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/welcome_gif"
+        android:layout_width="@dimen/size300"
+        android:layout_height="@dimen/size300"
+
+        android:background="@drawable/cat_start_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <com.catlover.catlover.widget.FontText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/text32"
+            app:layout_constraintBottom_toTopOf="@+id/message_text"
+            app:typeface="NunitoSans-Light.ttf" />
+
+        <com.catlover.catlover.widget.FontText
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/spacing20"
+            android:layout_marginLeft="@dimen/spacing20"
+            android:text="@string/message_welcome_first"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text24"
+            android:layout_marginTop="@dimen/spacing4"
+            app:typeface="NunitoSans-Light.ttf" />
+
+
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

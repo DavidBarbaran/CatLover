@@ -1,16 +1,19 @@
 package com.catlover.catlover;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
+import com.catlover.catlover.activity.WelcomeActivity;
 import com.catlover.catlover.util.DesignUtil;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -49,5 +52,10 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         }).start();
+    }
+
+    @OnClick(R.id.continue_btn)
+    public void actionContinue(){
+        startActivity(new Intent(this, WelcomeActivity.class));
     }
 }

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Cat Lover</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="cat">Cat</string>
+    <string name="lover">Lover</string>
+
+
+    <!-- Fragment welcome first -->
+    <string name="welcome">Bienvenido!</string>
+    <string name="message_welcome_first">Si eres un amante de los gatos esta es la aplicación que estabas buscando.</string>
+
 </resources>

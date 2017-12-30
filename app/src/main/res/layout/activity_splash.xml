@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/spacing20"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_gravity="center">
@@ -28,46 +28,46 @@
             <com.catlover.catlover.widget.FontText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cat"
+                android:text="@string/cat"
                 android:textColor="@color/black"
-                android:textSize="62sp"
+                android:textSize="@dimen/text62"
                 app:typeface="Neon.ttf" />
 
             <com.catlover.catlover.widget.FontText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lover"
+                android:text="@string/lover"
                 android:textColor="@color/white"
-                android:textSize="62sp"
+                android:textSize="@dimen/text62"
                 app:typeface="Neon.ttf" />
 
         </LinearLayout>
 
         <pl.droidsonroids.gif.GifImageView
-            android:layout_width="390dp"
-            android:layout_height="300dp"
+            android:layout_width="@dimen/size390"
+            android:layout_height="@dimen/size300"
             android:background="@drawable/cat_start_2" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="28dp"
+            android:paddingBottom="@dimen/spacing28"
             android:orientation="vertical">
 
             <com.wang.avi.AVLoadingIndicatorView
                 android:id="@+id/load_view"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/size48"
                 app:indicatorName="BallPulseIndicator" />
 
             <Button
                 android:id="@+id/continue_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/size48"
                 android:background="@drawable/bg_ripple_white"
-                android:paddingLeft="36dp"
-                android:paddingRight="36dp"
+                android:paddingLeft="@dimen/spacing36"
+                android:paddingRight="@dimen/spacing36"
                 android:text="Continuar"
                 android:textColor="@color/white"
                 android:visibility="gone" />
