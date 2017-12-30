@@ -1,47 +1,73 @@
 package com.catlover.catlover.adapter;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.catlover.catlover.fragment.WelcomeFirstFragment;
 import com.catlover.catlover.fragment.WelcomeSecondFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by DAVID on 27/12/2017.
  */
 
-public class WelcomeAdapter extends FragmentPagerAdapter {
-    private static int NUM_ITEMS = 3;
+public class WelcomeAdapter extends PagerAdapter {
+    private List<View> viewList;
 
-    public WelcomeAdapter(FragmentManager fragmentManager) {
-        super(fragmentManager);
+    public WelcomeAdapter(List<View> viewList) {
+        this.viewList = viewList;
     }
 
-    // Returns total number of pages
+    @Override
+    public Object instantiateItem(ViewGroup collection, int position) {
+        View view = viewList.get(position);
+        collection.addView(view);
+        return view;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup collection, int position, Object view) {
+        collection.removeView((View) view);
+    }
+
     @Override
     public int getCount() {
-        return NUM_ITEMS;
+        return viewList.size();
     }
 
-    // Returns the fragment to display for that page
     @Override
-    public Fragment getItem(int position) {
-        switch (position) {
-            case 0: // Fragment # 0 - This will show FirstFragment
-                return new WelcomeFirstFragment();
-            case 1: // Fragment # 0 - This will show FirstFragment different title
-                return new WelcomeSecondFragment();
-            case 2: // Fragment # 1 - This will show SecondFragment
-                return new WelcomeFirstFragment();
-            default:
-                return null;
+    public boolean isViewFromObject(View view, Object object) {
+        return view == object;
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+    }
+
+    void setData(@Nullable List<View> list) {
+        this.viewList.clear();
+        if (list != null && !list.isEmpty()) {
+            this.viewList.addAll(list);
         }
+
+        notifyDataSetChanged();
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return "Page " + position;
-    }
+    @NonNull
+    List<View> getData() {
+        if (viewList == null) {
+            viewList = new ArrayList<>();
+        }
 
+        return viewList;
+    }
 }

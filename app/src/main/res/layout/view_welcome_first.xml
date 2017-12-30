@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context="com.catlover.catlover.fragment.WelcomeFirstFragment"
     android:id="@+id/frameLayout">
 
     <pl.droidsonroids.gif.GifImageView
@@ -34,7 +33,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/welcome"
-
             android:textColor="@color/white"
             android:textSize="@dimen/text32"
             app:layout_constraintBottom_toTopOf="@+id/message_text"
@@ -52,10 +50,6 @@
             android:textSize="@dimen/text24"
             android:layout_marginTop="@dimen/spacing4"
             app:typeface="NunitoSans-Light.ttf" />
-
-
-
-
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
